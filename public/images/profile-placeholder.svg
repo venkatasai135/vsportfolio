@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250">
+  <!-- Background circle -->
+  <circle cx="125" cy="125" r="125" fill="#e0e0e0" />
+  
+  <!-- Stylized person silhouette -->
+  <circle cx="125" cy="85" r="40" fill="#a0a0a0" />
+  <path d="M125 135 Q 75 135 65 190 L 185 190 Q 175 135 125 135 Z" fill="#a0a0a0" />
+  
+  <!-- Text prompt -->
+  <text x="125" y="220" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#606060">Add Your Photo Here</text>
+</svg>

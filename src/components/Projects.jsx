@@ -30,7 +30,7 @@ const Projects = () => {
       description: 'A responsive weather application that provides real-time weather information using API integration. Users can search for weather conditions in any location worldwide.',
       technologies: ['React', 'JavaScript', 'Weather API', 'CSS'],
       image: '/project-weather.jpg',
-      githubLink: 'https://github.com',
+      githubLink: 'https://github.com/venkatasai135',
       liveLink: 'https://weather-app.example.com',
       features: [
         'Real-time weather data from external API',
@@ -45,7 +45,7 @@ const Projects = () => {
       description: 'A full-stack application for managing library resources, including books, members, and borrowing records. Features user authentication and role-based access control.',
       technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'JWT Authentication'],
       image: '/project-library.jpg',
-      githubLink: 'https://github.com',
+      githubLink: 'https://github.com/venkatasai135',
       liveLink: 'https://library-system.example.com',
       features: [
         'User authentication and authorization',
@@ -61,7 +61,7 @@ const Projects = () => {
       description: 'A secure online voting platform that allows organizations to conduct elections electronically. Includes features for voter verification and real-time result tabulation.',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Socket.io'],
       image: '/project-voting.jpg',
-      githubLink: 'https://github.com',
+      githubLink: 'https://github.com/venkatasai135',
       liveLink: 'https://voting-system.example.com',
       features: [
         'Secure voter authentication',
@@ -77,7 +77,7 @@ const Projects = () => {
       description: 'A customizable CMS that allows users to create, manage, and publish digital content. Designed with a focus on user experience and flexibility.',
       technologies: ['React', 'Node.js', 'Express', 'MySQL'],
       image: '/project-cms.jpg',
-      githubLink: 'https://github.com',
+      githubLink: 'https://github.com/venkatasai135',
       liveLink: 'https://cms.example.com',
       features: [
         'Content creation and editing',

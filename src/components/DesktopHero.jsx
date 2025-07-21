@@ -138,26 +138,13 @@ const DesktopHero = () => {
               </motion.div>
             </div>
             
-            {/* Add profile container back */}
+            {/* Profile container with just the image */}
             <motion.div 
               variants={itemVariants}
               className="profile-container"
             >
               <div className="profile-image-wrapper">
                 <div className="profile-image"></div>
-                <div className="rotating-text-container">
-                  <div className="rotating-text">
-                    {/* Add rotating text spans - these will rotate around the profile image */}
-                    <span style={{ transform: 'rotate(0deg) translateX(110px)' }}>Web</span>
-                    <span style={{ transform: 'rotate(45deg) translateX(110px)' }}>Developer</span>
-                    <span style={{ transform: 'rotate(90deg) translateX(110px)' }}>UI/UX</span>
-                    <span style={{ transform: 'rotate(135deg) translateX(110px)' }}>Designer</span>
-                    <span style={{ transform: 'rotate(180deg) translateX(110px)' }}>React</span>
-                    <span style={{ transform: 'rotate(225deg) translateX(110px)' }}>JavaScript</span>
-                    <span style={{ transform: 'rotate(270deg) translateX(110px)' }}>CSS</span>
-                    <span style={{ transform: 'rotate(315deg) translateX(110px)' }}>HTML</span>
-                  </div>
-                </div>
               </div>
             </motion.div>
           </div>
@@ -166,10 +153,10 @@ const DesktopHero = () => {
             variants={itemVariants}
             className="hero-social"
           >
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/venkatasai135" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/ladi-venkata-sai-b8598226b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <FaLinkedin />
             </a>
           </motion.div>

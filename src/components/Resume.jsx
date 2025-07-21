@@ -141,49 +141,55 @@ const Resume = () => {
             </motion.a>
           </motion.div>
           
+          {/* Work Experience Section - Moved to top */}
           <motion.div 
-            className="resume-preview"
-            initial={{ opacity: 0, y: 50 }}
+            className="work-experience-section"
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ type: "spring", duration: 0.7, delay: 0.2, stiffness: 100 }}
-            viewport={{ once: true, amount: 0.3 }}
+            transition={{ type: "spring", duration: 0.5, delay: 0.1, stiffness: 100 }}
+            viewport={{ once: true, amount: 0.1 }}
           >
-            {/* Work Experience Section */}
-            <div className="resume-section">
-              <div className="resume-section-header">
-                <FaBriefcase className="resume-icon" />
-                <h3>Work Experience</h3>
-              </div>
-              
-              <div className="timeline">
-                {workExperience.map((job, index) => (
-                  <motion.div 
-                    key={index} 
-                    className="timeline-item"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                  >
-                    <div className="timeline-marker"></div>
-                    <div className="timeline-content">
-                      <h4>{job.title}</h4>
-                      <div className="timeline-info">
-                        <p className="company">{job.company}</p>
-                        <p className="period">{job.period}</p>
-                      </div>
-                      <p className="description">{job.description}</p>
-                      <div className="skills-used">
-                        {job.skills.map((skill, skillIndex) => (
-                          <span key={skillIndex} className="skill-tag">{skill}</span>
-                        ))}
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+            <div className="resume-section-header">
+              <FaBriefcase className="resume-icon" />
+              <h3>Work Experience</h3>
             </div>
             
+            <div className="timeline">
+              {workExperience.map((job, index) => (
+                <motion.div 
+                  key={index} 
+                  className="timeline-item"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="timeline-marker"></div>
+                  <div className="timeline-content">
+                    <h4>{job.title}</h4>
+                    <div className="timeline-info">
+                      <p className="company">{job.company}</p>
+                      <p className="period">{job.period}</p>
+                    </div>
+                    <p className="description">{job.description}</p>
+                    <div className="skills-used">
+                      {job.skills.map((skill, skillIndex) => (
+                        <span key={skillIndex} className="skill-tag">{skill}</span>
+                      ))}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+          
+          <motion.div 
+            className="resume-preview"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ type: "spring", duration: 0.7, delay: 0.3, stiffness: 100 }}
+            viewport={{ once: true, amount: 0.3 }}
+          >
             {/* Education Section */}
             <div className="resume-section">
               <div className="resume-section-header">

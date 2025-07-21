@@ -160,7 +160,7 @@
   height: 180px;
   border-radius: 50%;
   background-color: #e0e0e0; /* Placeholder color */
-  background-image: url('/profile-placeholder.jpg'), url('https://placehold.co/180x180?text=Profile');
+  background-image: url('/profile-placeholder.JPG');
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -225,14 +225,22 @@
 .social-links {
   display: flex;
   justify-content: center;
-  gap: var(--spacing-md);
+  align-items: center;
+  gap: var(--spacing-lg); /* Consistent spacing between icons */
   margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-sm) 0; /* Add vertical padding */
+  width: 100%; /* Ensure full width of container */
+  position: relative; /* Ensure proper positioning */
 }
 
 .social-links a {
   color: var(--text-secondary);
-  font-size: 1.5rem;
-  transition: all 0.3s ease;
+  font-size: 2.5rem; /* Larger icons */
+  transition: all var(--transition-normal);
+  padding: 0.5rem; /* Added padding around icons */
+  display: flex; /* Ensure icon is centered within its container */
+  align-items: center;
+  justify-content: center;
 }
 
 .social-links a:hover {

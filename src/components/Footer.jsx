@@ -99,16 +99,16 @@ const Footer = () => {
             <motion.h4 variants={itemVariants}>Contact</motion.h4>
             <motion.p variants={itemVariants}>
               <motion.a 
-                href="mailto:ladivenkatasai@gmail.com"
+                href="mailto:ladivenkatsai@gmail.com"
                 whileHover="hover"
                 variants={linkVariants}
               >
-                <FaEnvelope /> ladi.venkata.sai@example.com
+                <FaEnvelope /> ladivenkatsai@gmail.com
               </motion.a>
             </motion.p>
             <motion.div className="footer-social" variants={containerVariants}>
               <motion.a 
-                href="https://github.com" 
+                href="https://github.com/venkatasai135" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="GitHub"
@@ -119,7 +119,7 @@ const Footer = () => {
                 <FaGithub />
               </motion.a>
               <motion.a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/ladi-venkata-sai-b8598226b" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 aria-label="LinkedIn"

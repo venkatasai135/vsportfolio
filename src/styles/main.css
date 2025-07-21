@@ -308,6 +308,100 @@ ul {
   text-align: left;
 }
 
+/* Desktop Hero Section */
+.desktop-hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-xl) 0;
+  background: linear-gradient(135deg, rgba(48, 79, 254, 0.1) 0%, rgba(0, 184, 217, 0.1) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Social Icons in Desktop Hero */
+.hero-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+  width: 100%; /* Ensure full width of container */
+}
+
+.hero-social a {
+  color: var(--text-secondary);
+  font-size: 2.5rem; /* Larger icons */
+  transition: all var(--transition-normal);
+  padding: 0.5rem; /* Added padding around icons */
+}
+
+.hero-social a:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* Profile Container Styles */
+.profile-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.profile-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.profile-image {
+  width: 250px; /* Increased size */
+  height: 250px;
+  border-radius: 50%;
+  background-color: #e0e0e0; /* Placeholder color */
+  background-image: url('/images/profile-placeholder.svg');
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid white;
+  box-shadow: var(--shadow-md);
+  z-index: 2;
+}
+
+/* Rotating Text Container */
+.rotating-text-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotating-text {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.rotating-text span {
+  position: absolute;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  transform-origin: 0 0;
+  white-space: nowrap;
+}
+
 .hero h1 {
   font-size: 3.5rem;
   margin-bottom: var(--spacing-sm);
@@ -335,39 +429,57 @@ ul {
   margin-bottom: var(--spacing-lg);
 }
 
-.social-icons {
-  display: flex;
-  justify-content: center;
-  gap: var(--spacing-md);
-  font-size: 1.5rem;
-}
+/* For .social-icons in main.css */ 
+.social-icons { 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  gap: var(--spacing-lg); /* Increased spacing between icons */
+  font-size: 2.5rem; 
+  margin-top: var(--spacing-md); 
+  width: 100%; /* Ensure full width of container */
+} 
 
-.social-icons a {
-  color: var(--text-secondary);
-  transition: all var(--transition-normal);
-}
+.social-icons a { 
+  color: var(--text-secondary); 
+  transition: all var(--transition-normal); 
+  padding: 0.5rem; /* Added padding around icons */ 
+} 
 
-.social-icons a:hover {
-  color: var(--primary-color);
-  transform: translateY(-3px);
+.social-icons a:hover { 
+  color: var(--primary-color); 
+  transform: translateY(-3px); 
 }
 
 /* About Section */
+.about {
+  padding: var(--spacing-lg) 0; /* Reduced padding from xl to lg */
+}
+
+.about .section-title {
+  font-size: 2.8rem; /* Increased from default h2 size */
+  margin-bottom: var(--spacing-md); /* Reduced from lg to md */
+}
+
 .about-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-md); /* Reduced from lg to md */
   align-items: start;
+  max-width: 1200px; /* Wider container */
+  margin: 0 auto;
 }
 
 .about-text p {
-  margin-bottom: var(--spacing-md);
+  font-size: 1.2rem; /* Increased from default paragraph size */
+  line-height: 1.7; /* Increased line height for better readability */
+  margin-bottom: var(--spacing-sm); /* Reduced from md to sm */
 }
 
 .about-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-md);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Increased from 250px */
+  gap: var(--spacing-sm); /* Reduced from md to sm */
 }
 
 .about-card {
@@ -384,10 +496,19 @@ ul {
   box-shadow: var(--shadow-md);
 }
 
+.about-card h3 {
+  font-size: 1.6rem; /* Increased from default h3 size */
+  margin-bottom: var(--spacing-xs); /* Reduced spacing */
+}
+
+.about-card p {
+  font-size: 1.1rem; /* Increased from default paragraph size */
+}
+
 .card-icon {
-  font-size: 2.5rem;
+  font-size: 2.8rem; /* Increased from 2.5rem */
   color: var(--primary-color);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs); /* Reduced from sm to xs */
 }
 
 /* Skills Section */
@@ -534,33 +655,80 @@ ul {
 }
 
 /* Resume Section */
+.resume {
+  padding-top: var(--spacing-md); /* Reduced from xl to md */
+}
+
+.resume .section-title {
+  margin-bottom: var(--spacing-sm); /* Reduced from md */
+}
+
+.resume .section-description {
+  margin-bottom: var(--spacing-sm); /* Reduced from lg */
+}
+
 .resume-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm); /* Reduced from lg */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-sm) var(--spacing-md); /* Reduced top/bottom padding */
   background-color: var(--surface-color);
   border-radius: var(--border-radius-lg);
-  padding: var(--spacing-lg);
   box-shadow: var(--shadow-sm);
 }
 
 .resume-actions {
   display: flex;
+  justify-content: center;
   gap: var(--spacing-md);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-xs); /* Reduced from md */
+}
+
+/* New class for the work experience section at the top */
+.work-experience-section {
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Make the timeline grid layout for work experience */
+.work-experience-section .timeline {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+}
+
+/* Adjust timeline items in the work experience section */
+.work-experience-section .timeline-item {
+  position: relative;
+  padding-left: 1rem; /* Reduced padding */
+  margin-bottom: var(--spacing-xs); /* Reduced margin */
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .work-experience-section .timeline {
+    grid-template-columns: 1fr; /* Single column on mobile */
+  }
 }
 
 .resume-preview {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md); /* Reduced from lg */
   border-top: 1px solid var(--border-color);
-  padding-top: var(--spacing-lg);
+  padding-top: var(--spacing-sm); /* Reduced from lg */
 }
 
 /* Resume Section Styles */
 .resume-section {
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-md); /* Reduced from xl */
 }
 
 .resume-section-header {
   display: flex;
   align-items: center;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm); /* Reduced from md */
   gap: var(--spacing-sm);
 }
 
@@ -571,7 +739,7 @@ ul {
 
 .resume-section h3 {
   color: var(--primary-color);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs); /* Reduced from sm */
 }
 
 .skills-list, .certification-list {
@@ -591,82 +759,105 @@ ul {
   margin-bottom: 0.25rem;
 }
 
+/* Two-column timeline layout */
 .timeline {
   position: relative;
-  padding-left: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+  padding-left: 0; /* Removed left padding since we're using a grid */
 }
 
+/* Remove the vertical line for the two-column layout */
 .timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  display: none;
 }
 
 .timeline-item {
   position: relative;
-  margin-bottom: var(--spacing-lg);
-  padding-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-sm); /* Reduced from lg */
+  padding-bottom: var(--spacing-xs); /* Reduced from md */
 }
 
+/* Adjust marker for the grid layout */
 .timeline-marker {
   position: absolute;
-  left: -38px;
+  left: 10px;
   top: 5px;
-  width: 16px;
-  height: 16px;
+  width: 12px; /* Smaller marker */
+  height: 12px;
   border-radius: 50%;
   background-color: var(--accent-color);
-  border: 3px solid white;
-  box-shadow: 0 0 0 3px rgba(48, 79, 254, 0.2);
+  border: 2px solid white; /* Thinner border */
+  box-shadow: 0 0 0 2px rgba(48, 79, 254, 0.2);
 }
 
 .timeline-content {
   background-color: var(--surface-color);
-  padding: var(--spacing-md);
-  border-radius: var(--border-radius-lg);
+  padding: var(--spacing-sm); /* Reduced from md */
+  padding-left: var(--spacing-md); /* Add space for the marker */
+  border-radius: var(--border-radius-md); /* Smaller radius */
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%; /* Ensure consistent height */
+  display: flex;
+  flex-direction: column;
 }
 
 .timeline-content:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px); /* Reduced from -5px */
   box-shadow: var(--shadow-md);
+}
+
+.timeline-content h4 {
+  font-size: 1.1rem; /* Slightly smaller */
+  margin-bottom: var(--spacing-xs);
 }
 
 .timeline-info {
   display: flex;
   justify-content: space-between;
-  margin-bottom: var(--spacing-sm);
-  font-size: 0.9rem;
+  margin-bottom: var(--spacing-xs); /* Reduced from sm */
+  font-size: 0.85rem; /* Smaller font */
   color: var(--text-secondary);
 }
 
 .company, .institution {
   font-weight: 500;
   color: var(--primary-color);
+  font-size: 0.85rem; /* Smaller font */
 }
 
 .period {
   font-style: italic;
+  font-size: 0.8rem; /* Smaller font */
+}
+
+.description {
+  font-size: 0.9rem; /* Smaller font */
+  margin-bottom: var(--spacing-xs); /* Reduced spacing */
+  line-height: 1.4; /* Tighter line height */
+  /* Limit description to 3 lines with ellipsis */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1; /* Allow it to grow to fill space */
 }
 
 .skills-used, .course-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: var(--spacing-sm);
+  gap: 0.3rem; /* Reduced from 0.5rem */
+  margin-top: var(--spacing-xs); /* Reduced from sm */
 }
 
 .skill-tag, .course-tag {
   background-color: rgba(48, 79, 254, 0.1);
   color: var(--primary-color);
-  padding: 0.25rem 0.75rem;
+  padding: 0.15rem 0.5rem; /* Reduced padding */
   border-radius: var(--border-radius-sm);
-  font-size: 0.8rem;
+  font-size: 0.75rem; /* Smaller font */
   font-weight: 500;
 }
 
@@ -700,30 +891,49 @@ ul {
 
 .timeline-item {
   position: relative;
-  padding-left: 60px;
-  margin-bottom: var(--spacing-lg);
+  padding-left: 1.5rem; /* Reduced from 60px */
+  margin-bottom: var(--spacing-sm); /* Reduced from lg */
+}
+
+/* Special styling for work experience timeline items */
+.work-experience-section .timeline-item {
+  margin-bottom: var(--spacing-xs); /* Even smaller margin */
 }
 
 .timeline-icon {
   position: absolute;
   left: 0;
   top: 0;
-  width: 40px;
-  height: 40px;
+  width: 25px; /* Smaller icon */
+  height: 25px; /* Smaller icon */
   background-color: var(--primary-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
-  font-size: 1.25rem;
+  font-size: 0.9rem; /* Smaller font */
+}
+
+/* Special styling for work experience timeline markers */
+.work-experience-section .timeline-marker {
+  width: 0.7rem; /* Smaller marker */
+  height: 0.7rem; /* Smaller marker */
+  top: 0.4rem; /* Adjusted position */
 }
 
 .timeline-content {
   background-color: var(--surface-color);
-  border-radius: var(--border-radius-lg);
-  padding: var(--spacing-md);
+  border-radius: var(--border-radius-md); /* Smaller radius */
+  padding: var(--spacing-sm); /* Reduced from md */
   box-shadow: var(--shadow-sm);
+}
+
+.work-experience-section .timeline-content {
+  padding: var(--spacing-xs) var(--spacing-sm); /* Even smaller padding */
+  height: 100%; /* Make all cards the same height */
+  display: flex;
+  flex-direction: column;
 }
 
 .timeline-period {
@@ -857,9 +1067,22 @@ ul {
 
 .social-links {
   display: flex;
+  justify-content: center;
   gap: var(--spacing-md);
-  font-size: 1.5rem;
+  font-size: 2.5rem; /* Increased from 1.5rem */
   margin-top: var(--spacing-xs);
+}
+
+/* Add padding to contact page social links */
+.contact-social .social-links a {
+  padding: 0.5rem;
+  color: var(--text-secondary);
+  transition: all var(--transition-normal);
+}
+
+.contact-social .social-links a:hover {
+  color: var(--primary-color);
+  transform: translateY(-3px);
 }
 
 .contact-form {
@@ -977,12 +1200,13 @@ ul {
   display: flex;
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
-  font-size: 1.25rem;
+  font-size: 2rem; /* Increased from 1.25rem */
 }
 
 .footer-social a {
   color: rgba(255, 255, 255, 0.7);
   transition: all var(--transition-normal);
+  padding: 0.4rem; /* Added padding around icons */
 }
 
 .footer-social a:hover {
