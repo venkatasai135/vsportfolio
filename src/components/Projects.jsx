@@ -29,7 +29,7 @@ const Projects = () => {
       title: 'Weather App',
       description: 'A responsive weather application that provides real-time weather information using API integration. Users can search for weather conditions in any location worldwide.',
       technologies: ['React', 'JavaScript', 'Weather API', 'CSS'],
-      image: '/project-weather.jpg',
+      image: '/project-weather.png',
       githubLink: 'https://github.com/venkatasai135',
       liveLink: 'https://weather-app.example.com',
       features: [
