@@ -32,7 +32,7 @@ const Skills = () => {
     {
       title: 'Frameworks & Libraries',
       icon: <FaLayerGroup />,
-      skills: ['ReactJS', 'Node.js', 'Express.js']
+      skills: ['ReactJS', 'Node.js']
     },
     {
       title: 'Databases',
@@ -57,7 +57,7 @@ const Skills = () => {
     >
         <motion.h2 className="section-title" variants={itemVariants}>Skills</motion.h2>
         <motion.p className="section-description" variants={itemVariants}>
-          Technologies and tools I work with to bring ideas to life.
+        Technologies and tools that I use to turn ideas into impactful, user-friendly web solutions.
         </motion.p>
         
         <motion.div className="skills-container" variants={itemVariants}>

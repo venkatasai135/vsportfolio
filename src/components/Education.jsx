@@ -22,16 +22,9 @@ const Education = () => {
                 <p><strong>CGPA:</strong> 8.91</p>
                 <p>
                   Currently pursuing my Bachelor's degree in Computer Science, focusing on 
-                  web development, algorithms, data structures, and software engineering principles.
+                  web development, algorithms, data structures,UI/UX design and software engineering principles.
                 </p>
-                <div className="achievements">
-                  <h5><FaMedal /> Achievements</h5>
-                  <ul>
-                    <li>Dean's List for academic excellence</li>
-                    <li>Winner, University Hackathon 2023</li>
-                    <li>Member of Computer Science Student Association</li>
-                  </ul>
-                </div>
+  
                 <div className="key-courses">
                   <h5><FaBook /> Key Courses</h5>
                   <ul>

@@ -7,10 +7,12 @@ import ProjectsPage from './pages/ProjectsPage';
 import ResumePage from './pages/ResumePage';
 import EducationPage from './pages/EducationPage';
 import CertificationsPage from './pages/CertificationsPage';
+import CertificateViewPage from './pages/CertificateViewPage';
 import ContactPage from './pages/ContactPage';
 import ErrorBoundary from './components/ErrorBoundary';
 import './styles/main.css';
 import './styles/desktopStyles.css';
+import './styles/certificateView.css';
 
 function App() {
   return (
@@ -25,6 +27,7 @@ function App() {
             <Route path="resume" element={<ResumePage />} />
             <Route path="education" element={<EducationPage />} />
             <Route path="certifications" element={<CertificationsPage />} />
+            <Route path="certificate/:id" element={<CertificateViewPage />} />
             <Route path="contact" element={<ContactPage />} />
           </Route>
         </Routes>

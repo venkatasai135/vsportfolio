@@ -69,6 +69,7 @@
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.8s ease, transform 0.8s ease;
+  order: 1; /* Ensure intro stays at the top */
 }
 
 .intro-section.loaded {
@@ -120,6 +121,7 @@
   transition: all 0.3s ease;
   opacity: 0;
   transform: scale(0.8);
+  z-index: 10; /* Ensure button stays above other elements */
 }
 
 .hire-button.loaded {
@@ -140,6 +142,7 @@
   justify-content: center;
   align-items: center;
   margin: var(--spacing-lg) 0;
+  order: 2; /* Ensure profile is in the middle */
 }
 
 .profile-image-wrapper {
@@ -227,25 +230,64 @@
   justify-content: center;
   align-items: center;
   gap: var(--spacing-lg); /* Consistent spacing between icons */
+  margin-top: var(--spacing-lg); /* Add space above the links */
   margin-bottom: var(--spacing-lg);
   padding: var(--spacing-sm) 0; /* Add vertical padding */
   width: 100%; /* Ensure full width of container */
   position: relative; /* Ensure proper positioning */
+  text-align: center; /* Ensure text alignment is centered */
+  order: 3; /* Ensure it appears after the profile container */
+  position: relative;
+  /* Add subtle pulsing glow effect to the container */
+  animation: subtlePulse 4s ease-in-out infinite;
+}
+
+@keyframes subtlePulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(48, 79, 254, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(48, 79, 254, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(48, 79, 254, 0);
+  }
 }
 
 .social-links a {
   color: var(--text-secondary);
-  font-size: 2.5rem; /* Larger icons */
-  transition: all var(--transition-normal);
+  font-size: 3rem; /* Increased icon size */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Enhanced transition with bounce effect */
   padding: 0.5rem; /* Added padding around icons */
   display: flex; /* Ensure icon is centered within its container */
   align-items: center;
   justify-content: center;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards 1.2s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add a slight delay between icons */
+.social-links a:nth-child(2) {
+  animation-delay: 1.4s;
 }
 
 .social-links a:hover {
   color: var(--primary-color);
-  transform: translateY(-3px);
+  transform: translateY(-5px) scale(1.1);
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.1));
 }
 
 /* Responsive Adjustments */

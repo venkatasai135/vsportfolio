@@ -38,11 +38,9 @@ const About = () => {
         <div className="about-content">
           <motion.div className="about-text" variants={itemVariants}>
             <motion.p variants={itemVariants}>
-              I'm Ladi Venkata Sai, a passionate web developer and UI/UX enthusiast with a strong foundation in computer science. I graduated from Vellore Institute of Technology with a degree in Computer Science and Engineering.
-            </motion.p>
+            I'm Ladi Venkata Sai, a web developer and UI/UX enthusiast with a strong background in computer science. I studied at KL University, Vijayawada.</motion.p>
             <motion.p variants={itemVariants}>
-              I specialize in front-end development with React, but I'm also comfortable working with back-end technologies to build full-stack applications. I believe in the power of clean, efficient code and thoughtful design to create digital experiences that are both functional and delightful to use.
-            </motion.p>
+            My focus is on front-end development using React, but I'm comfortable building full-stack applications. I believe in crafting clean, efficient code and thoughtful designs that create seamless and delightful digital experiences.            </motion.p>
           </motion.div>
           
           <motion.div className="about-cards" variants={containerVariants}>
@@ -55,7 +53,7 @@ const About = () => {
                 <FaUserGraduate />
               </div>
               <h3>Education</h3>
-              <p>B.Tech in Computer Science from Vellore Institute of Technology</p>
+              <p>B.Tech in Computer Science from KL University</p>
             </motion.div>
             
             <motion.div 
@@ -66,8 +64,8 @@ const About = () => {
               <div className="card-icon">
                 <FaLaptopCode />
               </div>
-              <h3>Development</h3>
-              <p>Full-stack web development with a focus on modern JavaScript frameworks</p>
+              <h3>Web Development</h3>
+              <p>Full-stack development, efficient and user-focused</p>
             </motion.div>
             
             <motion.div 

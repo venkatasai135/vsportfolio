@@ -65,36 +65,35 @@ const Resume = () => {
   const education = [
     {
       degree: "B.Tech in Computer Science",
-      institution: "Vellore Institute of Technology",
-      period: "2020 - 2024",
+      institution: "KL University",
+      period: "2023 - 2027",
       description: "Specializing in web development and UI/UX design with a focus on modern JavaScript frameworks and responsive design principles.",
-      courses: ["Data Structures & Algorithms", "Web Development", "UI/UX Design", "Database Management"]
+      courses: ["Data Structures & Algorithms", "Web Development", "UI/UX Design"]
     },
     {
-      degree: "Web Development Bootcamp",
-      institution: "Online Learning Platform",
-      period: "Summer 2022",
-      description: "Intensive 12-week program covering full-stack web development with modern technologies.",
-      courses: ["React.js", "Node.js", "MongoDB", "Express.js"]
+      degree: "Intermediate,MPC",
+      institution: "Sri Chaitanya",
+      period: "2021 – 2023",
+      courses: ["Physics", "Chemistry", "Maths"]
     }
   ];
 
   // Certifications
   const certifications = [
     {
-      name: "React - The Complete Guide",
-      issuer: "Udemy",
-      date: "August 2022"
+      name: "Data Analytics Job Simulation",
+      issuer: "Deloitte",
+      date: "May 23 2025"
     },
     {
-      name: "JavaScript Algorithms and Data Structures",
-      issuer: "freeCodeCamp",
-      date: "May 2022"
+      name: "UI/UX Designing",
+      issuer: "LearnX",
+      date: "17 November 2023"
     },
     {
-      name: "UI/UX Design Fundamentals",
-      issuer: "Coursera",
-      date: "January 2023"
+      name: "AI Associate",
+      issuer: "Salesforce",
+      date: "29 October 2024"
     }
   ];
 

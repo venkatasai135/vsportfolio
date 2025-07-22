@@ -29,7 +29,7 @@ const Projects = () => {
       title: 'Weather App',
       description: 'A responsive weather application that provides real-time weather information using API integration. Users can search for weather conditions in any location worldwide.',
       technologies: ['React', 'JavaScript', 'Weather API', 'CSS'],
-      image: '/project-weather.png',
+      image: '/project-weather.jpg',
       githubLink: 'https://github.com/venkatasai135/weather',
       liveLink: 'https://weatherproject135.netlify.app/',
       features: [
@@ -50,7 +50,6 @@ const Projects = () => {
       features: [
         'User authentication and authorization',
         'Book catalog with search functionality',
-        'Member management system',
         'Borrowing and returning workflow',
         'Admin dashboard with analytics'
       ]

@@ -1,4 +1,5 @@
-import { FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaCertificate, FaExternalLinkAlt, FaImage } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Certifications = () => {
   const certifications = [
@@ -6,41 +7,41 @@ const Certifications = () => {
       id: 1,
       title: 'Salesforce AI Associate',
       issuer: 'Salesforce',
-      date: 'June 2023',
+      date: 'October 29, 2024',
       description: 'Certification validating knowledge of AI principles and their application within the Salesforce ecosystem.',
-      credentialLink: 'https://example.com/credential/salesforce-ai'
+      certificateImage: '/images/certificate-placeholder.svg'
     },
     {
       id: 2,
-      title: 'HackerRank Java Certification',
-      issuer: 'HackerRank',
-      date: 'March 2023',
-      description: 'Certification demonstrating proficiency in Java programming language, data structures, and algorithms.',
-      credentialLink: 'https://example.com/credential/hackerrank-java'
+      title: 'Virtual Internship Program in Networking',
+      issuer: 'Cisco AICTE Virtual Internship Program 2024',
+      date: 'May - July 2024',
+      description: 'This internship was an incredible opportunity to enhance my skills and knowledge in networking, and I am grateful for the chance to learn from industry leaders..',
+      certificateImage: '/images/certificate-placeholder.svg'
     },
     {
       id: 3,
-      title: 'HackerRank Python Certification',
-      issuer: 'HackerRank',
-      date: 'April 2023',
-      description: 'Certification validating skills in Python programming, including core concepts and advanced techniques.',
-      credentialLink: 'https://example.com/credential/hackerrank-python'
+      title: 'Python Full Stack',
+      issuer: 'EduSkills',
+      date: '14 May 2025',
+      description: 'Certification validating skills inogramming, including core concepts and advanced techniques.',
+      certificateImage: '/images/certificate-placeholder.svg'
     },
     {
       id: 4,
-      title: 'Microsoft Power BI',
-      issuer: 'Microsoft',
-      date: 'August 2023',
+      title: 'Data Analytics Job Simulation',
+      issuer: 'Deloitte',
+      date: 'May 2025',
       description: 'Certification demonstrating ability to create data visualizations, perform data analysis, and share insights using Power BI.',
-      credentialLink: 'https://example.com/credential/microsoft-powerbi'
+      certificateImage: '/images/certificate-placeholder.svg'
     },
     {
       id: 5,
-      title: 'Deloitte Data Analytics Job Simulation',
-      issuer: 'Deloitte & Forage',
+      title: 'Deloitte Data Analyticion',
+      issuer: 'Deloitte & Foe',
       date: 'October 2023',
       description: 'Completion of a virtual work experience program focused on data analytics techniques and business applications.',
-      credentialLink: 'https://example.com/credential/deloitte-analytics'
+      certificateImage: '/images/certificate-placeholder.svg'
     }
   ];
 
@@ -63,14 +64,21 @@ const Certifications = () => {
                 <p className="certification-issuer">{cert.issuer}</p>
                 <p className="certification-date">{cert.date}</p>
                 <p className="certification-description">{cert.description}</p>
-                <a 
-                  href={cert.credentialLink} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="credential-link"
-                >
-                  View Credential <FaExternalLinkAlt />
-                </a>
+                <div className="certificate-preview">
+                  <Link 
+                    to={`/certificate/${cert.id}`}
+                    className="certificate-link"
+                  >
+                    <img 
+                      src={cert.certificateImage} 
+                      alt={`${cert.title} Certificate`} 
+                      className="certificate-thumbnail" 
+                    />
+                    <div className="view-overlay">
+                      <FaImage /> View Certificate
+                    </div>
+                  </Link>
+                </div>
               </div>
             </div>
           ))}
